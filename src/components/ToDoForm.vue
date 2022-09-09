@@ -1,7 +1,7 @@
 <template>
 
-    <div>
-        <form class="m-auto was-validated" novalidate>
+    <div >
+        <form v-if="hideForm" class="m-auto was-validated" novalidate>
 
             <div class="form-group position-relative mt-3">
                 <label class="fw-bold" for="firstNameInp">First Name</label>
@@ -53,7 +53,7 @@
 
     </div>
 
-    <button @click="sendFormData" class="btn btn-sm btn-primary w-25 mt-3">Ekle</button>
+    <button @click="addToList({ firstName: this.firstNameInput, lastName: this.lastNameInput, job: this.jobInput, phoneNumber: this.phoneNumberInput, progress: this.progressingInput })" class="btn btn-sm btn-primary w-25 mt-3">Ekle</button>
 </template>
 
 
@@ -73,18 +73,8 @@ export default {
         }
     },
 
-    methods: {
-
-        sendFormData() {
-
-            this.$emit('add-item', { firstName: this.firstNameInput, lastName: this.lastNameInput, job: this.jobInput, phoneNumber: this.phoneNumberInput, progress: this.progressingInput })
-
-        }
-
-
-    },
-
-    props: ["hide"]
+    props: ["hide"],
+    inject:["addToList","hideForm"]
 
 
 
@@ -94,3 +84,5 @@ export default {
 
 
 </script>
+
+

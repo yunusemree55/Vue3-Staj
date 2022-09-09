@@ -6,7 +6,7 @@
         <div class="side-bar flex-shrink-0 p-3 bg-white" style="width: 280px;">
                 <a href="" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
                     <svg class="bi me-2" width="30" height="24"><img
-                            src="https://cdn.imgbin.com/9/1/7/imgbin-small-business-company-office-corporation-office-icon-insharepics-building-zVZnhzF62vgbB3HtnjkUK9iV6.jpg"
+                            src="https://www.pngkit.com/png/detail/760-7603646_facilities-red-company-icon-png.png"
                             class="rounded-circle" style="width:40px"></svg>
                     <span class="fs-5 fw-semibold ms-1">Clever</span>
                 </a>
@@ -75,3 +75,32 @@
 </div>
 
 </template>
+
+
+<script>
+
+export default{
+
+    data(){
+       return{
+
+
+
+       } 
+    }
+
+
+}
+
+
+</script>
+
+
+
+
+
+
+
+
+
+

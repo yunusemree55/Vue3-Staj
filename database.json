@@ -1,0 +1,36 @@
+{
+  "toDoList": [
+    {
+      "id": 1,
+      "firstName": "Arthur",
+      "lastName": "Morgan",
+      "job": "Cook Dinner for guests",
+      "phoneNumber": "0500 123 25 74",
+      "progress": true
+    },
+    {
+      "id": 2,
+      "firstName": "Dutch",
+      "lastName": "Miller",
+      "job": "Clean home",
+      "phoneNumber": "0200 158 76 21",
+      "progress": false
+    },
+    {
+      "firstName": "qweqweqwe",
+      "lastName": "qewqwedad",
+      "job": "asdasd",
+      "phoneNumber": "12312312312",
+      "progress": false,
+      "id": 3
+    },
+    {
+      "firstName": "qweqweqwe",
+      "lastName": "qewqwedad",
+      "job": "asdasd",
+      "phoneNumber": "12312312312",
+      "progress": true,
+      "id": 5
+    }
+  ]
+}

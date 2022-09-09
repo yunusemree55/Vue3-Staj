@@ -16,14 +16,14 @@
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="(item, index) in data" :key="item.id"
+                <tr v-for="(item, index) in data.list" :key="item.id"
                     :class="{ red: !item.progress, green: item.progress, }">
                     <th>{{ index + 1 }}</th>
                     <td>{{ item.firstName + " " + item.lastName }}</td>
                     <td>{{ item.job }}</td>
                     <td>{{ item.phoneNumber }}</td>
                     <td>{{ isFinished(item.progress) }}</td>
-                    <th scope="row"><button @click="this.$emit('delete-item',item)" class="btn text-white bg-danger">Delete</button>
+                    <th scope="row"><button @click="removeItem(item)" class="btn text-white bg-danger">Delete</button>
                     </th>
                 </tr>
             </tbody>
@@ -52,7 +52,8 @@ export default {
 
     },
 
-    props: ["data"],
+    // props: ["data"],
+    inject:["data","removeItem"],
 
     methods: {
 

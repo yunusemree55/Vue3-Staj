@@ -16,7 +16,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="(item, index) in data.list" :key="item.id"
+                <tr v-for="(item, index) in myData.list" :key="index"
                     :class="{ red: !item.progress, green: item.progress, }">
                     <th>{{ index + 1 }}</th>
                     <td>{{ item.firstName + " " + item.lastName }}</td>
@@ -28,6 +28,13 @@
                 </tr>
             </tbody>
         </table>
+
+        <div class="d-flex justify-content-end me-3">
+
+            <button @click="GoToFormPage" class="btn btn-sm btn-primary mb-3" style="width:125px">Ekle</button>
+
+
+        </div>
 
 
     </div>
@@ -46,17 +53,24 @@ export default {
 
         return {
 
-            showSituation:""
+            showSituation: ""
 
         }
 
     },
 
     // props: ["data"],
-    inject:["data","removeItem"],
+    inject: ["myData", "removeItem"],
 
     methods: {
 
+        
+        GoToFormPage(){
+
+            this.$router.push({name:'ToDoFormPage'})
+
+        },
+    
 
         isFinished(situation) {
 

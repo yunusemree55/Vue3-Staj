@@ -60,10 +60,9 @@
                         </button>
                         <div class="collapse" id="account-collapse">
                             <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                <li><a href="#" class="link-dark rounded">New...</a></li>
-                                <li><a href="#" class="link-dark rounded">Profile</a></li>
-                                <li><a href="#" class="link-dark rounded">Settings</a></li>
-                                <li><a href="#" class="link-dark rounded">Sign out</a></li>
+                                
+                                <button v-if="isAuthenticated" @click="logOut" class="btn btn-sm btn-danger mt-2">Logout</button>
+                                <button v-if="!isAuthenticated" @click="logIn" class="btn btn-sm btn-success mt-2">Login</button>
                             </ul>
                         </div>
                     </li>
@@ -78,6 +77,8 @@
 
 
 <script>
+import { mapGetters } from 'vuex'
+
 
 export default{
 
@@ -87,6 +88,38 @@ export default{
 
 
        } 
+    },
+
+
+    methods: {
+
+        logOut(){
+
+            this.$store.commit("setLogout",false)
+            this.$store.commit("setResetUser")
+            this.$router.push({name:"LoginPage"})
+
+        },
+        logIn(){
+
+            this.$router.push({name:"LoginPage"})
+
+
+        }
+
+
+    },
+
+    computed:{
+
+        ...mapGetters({
+
+            isAuthenticated:"_isAuthenticated"
+
+        })
+
+
+
     }
 
 

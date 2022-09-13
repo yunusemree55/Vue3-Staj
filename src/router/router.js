@@ -19,6 +19,20 @@ const routes = [
         component: () => import("@/views/ToDoFormComponent.vue")
 
 
+    },
+    {
+
+        name:"RegisterPage",
+        path:"/register",
+        component: () => import("@/views/Register.vue")
+    },
+    {
+
+        name:"LoginPage",
+        path:"/login",
+        component: () => import("@/views/Login.vue")
+
+
     }
 
 

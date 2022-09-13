@@ -51,7 +51,7 @@
   
 <script>
 
-import axios from 'axios'
+
 import ApiCard2 from '@/components/CardItems/ApiCard2.vue';
 import ApiCard from '@/components/CardItems/ApiCard.vue';
 import CreditCard from '@/components/CardItems/CreditCard.vue';
@@ -88,7 +88,7 @@ export default {
     },
 
     created() {
-        axios.get("http://localhost:3000/toDoList").then(get_response => {
+        this.$axios.get("http://localhost:3000/toDoList").then(get_response => {
             console.log(this.myData.list = get_response.data);
             
         });
@@ -109,7 +109,7 @@ export default {
         },
         removeItem(item) {
             this.myData.list = this.myData.list.filter(i => i != item);
-            axios.delete(`http://localhost:3000/toDoList/${item.id}`);
+            this.$axios.delete(`http://localhost:3000/toDoList/${item.id}`);
             console.log(item);
         },
 

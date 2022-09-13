@@ -15,22 +15,44 @@
       "job": "Clean home",
       "phoneNumber": "0200 158 76 21",
       "progress": false
+    }
+  ],
+  "users": [
+    {
+      "fullname": "Yunus Emre",
+      "username": "yunusemre55",
+      "password": "53bfc6d1f2fec73050a5f25ab169c1c2e2dda727",
+      "id": 1
     },
     {
-      "firstName": "yunus emre",
-      "lastName": "çiçek",
-      "phoneNumber": "33333333333",
-      "job": "asdasdasd",
-      "progress": true,
+      "fullname": "Enes Emir",
+      "username": "enesemir55",
+      "password": "e0ffbc1392ad8b3c8dcd998ebc64dbef93ff98f9",
+      "id": 2
+    },
+    {
+      "fullname": "Yunus",
+      "username": "yunus123",
+      "password": "e993b4647b7cc1ffb2f1c955b14624fb659d23a0",
       "id": 3
     },
     {
-      "firstName": "asdasdasd",
-      "lastName": "asdasdasd",
-      "phoneNumber": "12312312312",
-      "job": "eqweqweqwe",
-      "progress": false,
+      "fullname": "Nedim Görgü",
+      "username": "nedim123",
+      "password": "5916f6941bc524bd1ff96246991d4925f56e5417",
       "id": 4
+    },
+    {
+      "fullname": "Yunus Çiçek",
+      "username": "yunuss",
+      "password": "e993b4647b7cc1ffb2f1c955b14624fb659d23a0",
+      "id": 5
+    },
+    {
+      "fullname": "Arzu Çiçek",
+      "username": "arzu123",
+      "password": "e993b4647b7cc1ffb2f1c955b14624fb659d23a0",
+      "id": 6
     }
   ]
 }

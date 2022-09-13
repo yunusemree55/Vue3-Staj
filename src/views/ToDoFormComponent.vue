@@ -65,7 +65,6 @@
 
 <script>
 
-import axios from "axios";
 export default {
 
     
@@ -109,7 +108,7 @@ export default {
 
             if (this.checkFirstName(value.firstName) != false && this.checkLastName(value.lastName) != false && this.checkJobDescription(value.job) != false && this.checkPhoneNumber(value.phoneNumber) != false) {
 
-                axios.post("http://localhost:3000/toDoList", value).then(save_response => console.log("Eklendi: " + save_response));
+                this.$axios.post("http://localhost:3000/toDoList", value).then(save_response => console.log("Eklendi: " + save_response));
                 this.$router.push({ name: "HomePage" })
                 
 

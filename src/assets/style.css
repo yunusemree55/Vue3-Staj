@@ -7,7 +7,15 @@ body {
 	height: 100%;
 }
 
-.global-container{
+.vertical-center {
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.global-container {
 
 
 	height: 100%;
@@ -32,84 +40,85 @@ body {
 
 .content {
 	/* display: table-cell; */
-	width:98%;
+	width: 98%;
 	vertical-align: top;
 }
 
 
-div.subscribe-box{
+div.subscribe-box {
 
-height: 260px;
-background-image: url("https://img.freepik.com/free-vector/hand-painted-colorful-background_1199-332.jpg");
-border-radius: 25px;
+	height: 260px;
+	background-image: url("https://img.freepik.com/free-vector/hand-painted-colorful-background_1199-332.jpg");
+	border-radius: 25px;
 
 }
 
-div.subscribe-box button{
+div.subscribe-box button {
 
 	background-color: white;
 	color: black;
 	border-radius: 15px;
 }
 
-div.subscribe-box button:hover{
+div.subscribe-box button:hover {
 
 	background-color: rgb(58, 58, 253);
 	color: white;
 }
 
 
-span.money{
+span.money {
 
 	font-size: 15px;
 	color: rgb(85, 85, 250);
 }
 
 
-img.userCheck{
+img.userCheck {
 
-	
+
 	width: 20px;
-	
+
 }
 
-button.saveButton{
+button.saveButton {
 
 
 	width: 95px;
 
 }
 
-div.cardItem{
+div.cardItem {
 
 	border-radius: 25px;
 }
 
-button.borderBtn{
+button.borderBtn {
 
 	border-radius: 25px;
 }
 
-button.editBtn{
+button.editBtn {
 
 
 	color: rgb(58, 58, 253);
 }
 
-img.creditCard{
+img.creditCard {
 
 
 	width: 110px;
 }
 
 
-p.cardInfo,p.cardInfo2{
+p.cardInfo,
+p.cardInfo2 {
 
 	font-size: 15px;
 	color: gray;
 }
 
-span.bold{
+span.bold {
 
 	color: black;
 	font-weight: bold;
@@ -119,14 +128,14 @@ span.bold{
 
 
 /* TABLO RENKLERİ */
-.red{
+.red {
 
 
 	background-color: rgb(253, 146, 146);
 
 }
 
-.green{
+.green {
 
 	background-color: rgb(129, 255, 129);
 

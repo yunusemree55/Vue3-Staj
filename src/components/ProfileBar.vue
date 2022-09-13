@@ -1,6 +1,6 @@
 <template>
 
-    <div class="row ">
+    <div v-if="isAuthenticated" class="row ">
         <div class="col-2 mt-2">
             <img class="rounded-circle " style="width: 100px;"
                 src="https://esquimaltmfrc.com/wp-content/uploads/2015/09/flat-faces-icons-circle-woman-3.png">
@@ -8,7 +8,7 @@
 
 
         <div class="col-5 mt-2 ms-0 ">
-            <h2>Marie Claire</h2>
+            <h2>{{this.getUser?.fullname}}</h2>
             <button style="color: gray;" class="border-0 fw-bold bg-white">
                 
                 
@@ -40,9 +40,24 @@
 
 
 <script>
+import { mapGetters } from 'vuex';
+
+export default {
+    
 
 
+    computed:{
+
+        ...mapGetters({
+
+            getUser:"_getUser",
+            isAuthenticated:"_isAuthenticated"
 
 
+        })
 
+    }
+
+
+}
 </script>

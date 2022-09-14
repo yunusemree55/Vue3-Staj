@@ -1,5 +1,5 @@
 import {createRouter, createWebHashHistory} from "vue-router";
-
+import store from "@/store/index.js"
 
 
 const routes = [
@@ -48,6 +48,32 @@ const router = createRouter({
 
 
 });
+
+
+router.beforeEach((to,_,next) => {
+
+    const requiredAuthenticatedRoutes = ["HomePage"]
+    const notRequiredAuthenticatedRoutes = ["LoginPage","RegisterPage"]
+
+    const isAuthenticated = store.getters._isAuthenticated;
+
+    if(notRequiredAuthenticatedRoutes.indexOf(to.name) > -1 && isAuthenticated ) next(false)
+
+    if(requiredAuthenticatedRoutes.indexOf(to.name) > -1 ){
+
+        if(isAuthenticated) next();
+        else{
+            next({name:"LoginPage"})
+        }
+    }
+    else{
+        next();
+    }
+
+
+
+
+})
 
 
 
